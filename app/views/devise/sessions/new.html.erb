@@ -9,13 +9,13 @@
         <%= f.email_field :email, autofocus: true, class: 'form-control' %>
       </div>
       <div class="form-group">
-        <%= f.label :password %>
+        <label>Senha</label>
         <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
       </div>
       <% if devise_mapping.rememberable? %>
         <div class="checkbox">
           <%= f.label :remember_me do %>
-            <%= f.check_box :remember_me %> <%= t('.remember_me', default: 'Remember me') %>
+            <%= f.check_box :remember_me %> <%= t('.remember_me', default: 'Lembrar') %>
           <% end %>
         </div>
       <% end %>

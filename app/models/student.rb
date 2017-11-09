@@ -1,4 +1,5 @@
 class Student < ApplicationRecord
-	enum sex: [:male, :female]
-	enum status: [:inactive, :active]
+	enum sex: [:masculino, :feminino]
+	enum status: [:inativo, :ativo]
+	
 end

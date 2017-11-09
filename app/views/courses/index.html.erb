@@ -1,16 +1,15 @@
 <%- model_class = Course -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Cursos</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:type) %></th>
-      <th><%= model_class.human_attribute_name(:duration) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Duração</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -22,7 +21,6 @@
         <td><%= course.description %></td>
         <td><%= course.type %></td>
         <td><%= course.duration %></td>
-        <td><%=l course.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       course_path(course), :class => 'btn btn-default btn-xs' %>
